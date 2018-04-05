@@ -39,8 +39,7 @@ public class ClearTaxMain {
 
 	public static String printEquation(Equation equation) throws IOException {
 		StringBuilder equationBulder = new StringBuilder(
-				getLhs(equation) + " " + getOp(equation) + " " + getRhs(equation));// visits the lhs, op and rhs
-																					// recursively
+				getLhs(equation) + " " + getOp(equation) + " " + getRhs(equation));
 		String stringEquation = Helper.sanitizeEquation(equationBulder);
 		System.out.println("The Equation is: " + stringEquation);
 		return stringEquation;
