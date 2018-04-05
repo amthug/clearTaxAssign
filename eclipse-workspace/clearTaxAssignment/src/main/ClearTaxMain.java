@@ -41,7 +41,7 @@ public class ClearTaxMain {
 		StringBuilder equationBulder = new StringBuilder(
 				getLhs(equation) + " " + getOp(equation) + " " + getRhs(equation));
 		String stringEquation = Helper.sanitizeEquation(equationBulder);
-		System.out.println("The Equation is: " + stringEquation);
+		System.out.println("Equation: " + stringEquation);
 		return stringEquation;
 	}
 
@@ -62,7 +62,7 @@ public class ClearTaxMain {
 		ScriptEngineManager mgr = new ScriptEngineManager();
 		ScriptEngine engine = mgr.getEngineByName("JavaScript");
 		String solution = engine.eval(reorganizedEquation.split("=")[1]).toString();
-		System.out.println("final solution = " + solution);
+		System.out.println("x = " + solution);
 		return solution;
 	}
 
